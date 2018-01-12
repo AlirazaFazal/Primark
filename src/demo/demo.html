@@ -1,0 +1,114 @@
+<html lang="en-us" style="height:100%;" dir="ltr">
+  <head>
+    <title>Composite Components - Nested Composites</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../css/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../css/images/touchicon.png">
+    <meta name="apple-mobile-web-app-title" content="Oracle JET">
+    <link rel="stylesheet" id="css" href="http://www.oracle.com/webfolder/technetwork/jet/css/libs/oj/v4.1.0/alta/oj-alta-min.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <!-- Needed for webcomponents issue https://github.com/webcomponents/webcomponentsjs/issues/6 -->
+    <script>
+      if (!document.createElement) {
+        document.createElement = document.constructor.prototype.createElement;
+        document.createElementNS = document.constructor.prototype.createElementNS;
+        document.importNode = document.constructor.prototype.importNode;
+      }
+
+      // The "oj_whenReady" global variable enables a strategy that the busy context whenReady,
+      // will implicitly add a busy state, until the application calls applicationBoostrapComplete
+      // on the busy state context.
+      window["oj_whenReady"] = true;
+    </script>
+    <script src="http://www.oracle.com/webfolder/technetwork/jet/js/libs/require/require.js"></script>
+    <!-- RequireJS bootstrap file -->
+    <script src="../js/main.js"></script>
+    <script src="../js/demo.js"></script>
+  </head>
+  <body class="demo-disable-bg-image">
+    <div id="sampleDemo" style="" class="demo-padding demo-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        <!-- Page -->
+        <div id="page" class="oj-offcanvas-outer-wrapper oj-offcanvas-page">
+          <!-- Navigation Drawer -->
+          <div id="navDrawer" role="navigation" class="oj-hybrid-applayout-offcanvas oj-offcanvas-start oj-contrast-marker">
+            <!-- User Profile -->
+            <div>
+              <img alt="profile image" src="css/samples/cookbook/images/appLayout/james_avatar.png" class="demo-james-icon">
+              <h2 class="demo-profile-name">James</h2>
+              <!-- Navigation -->
+              <oj-navigation-list class="oj-navigationlist-stack-icon-label"
+                                  on-click="[[toggleDrawer]]"
+                                  selection="{{router.stateId}}">
+                <ul>
+                  <li id="home">
+                    <a href="#">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
+                      Home
+                    </a>
+                  </li>
+                  <li id="pastpurchases">
+                    <a href="#">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24"></span>
+                      Past Purchases
+                    </a>
+                  </li>
+                  <li id="addpaymentdetails">
+                    <a href="#">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24"></span>
+                      Add Payment Details
+                    </a>
+                  </li>
+                  <li id="profile">
+                    <a href="#">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
+                      Profile
+                    </a>
+                  </li>
+                  <li id="recentreceipts">
+                    <a href="#">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
+                      Recent Receipts
+                    </a>
+                  </li>
+                </ul>
+              </oj-navigation-list>
+              <div class="oj-flex-bar oj-sm-justify-content-center">
+                <h2 class="demo-app-name">Oracle App Name</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Page -->
+          <div class="oj-hybrid-applayout-page" id="pageContent">
+            <!-- Header -->
+            <div class="oj-applayout-fixed-top">
+              <header role="banner" class="oj-hybrid-applayout-header">
+                <div class="oj-flex-bar-start">
+                  <oj-button id="drawerToggleButton" on-click="[[toggleDrawer]]" chroming="half" display="icons">
+                    <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-hamburger"></span>
+                    <span>Navigation Drawer</span>
+                  </oj-button>
+                </div>
+                <div class="oj-hybrid-applayout-bar-title">
+                  <h1 class="oj-hybrid-applayout-header-title" data-bind="text: router.currentState().label"></h1>
+                </div>
+              </header>
+            </div>
+            <!-- Content -->
+            <div class="oj-applayout-content">
+              <div role="main" class="oj-hybrid-applayout-content">
+                <div id="content" class="oj-hybrid-padding" data-bind="ojModule: router.moduleConfig">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

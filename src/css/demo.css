@@ -1,0 +1,31 @@
+
+#navDrawer{
+ background: #1C97C2; 
+}
+/* Hides the content area until we are ready to display after paddings have been adjusted. */
+.oj-applayout-content:not(.oj-complete) {
+  visibility: hidden;
+}
+
+.demo-james-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-profile-name {
+  font-size: 1.714rem;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 42px;
+  margin: 0;
+}
+
+#navDrawer{
+ background: #1C97C2; 
+}
+
