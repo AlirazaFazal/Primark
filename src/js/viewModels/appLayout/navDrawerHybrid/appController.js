@@ -17,11 +17,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
        // Router setup
        self.router = oj.Router.rootInstance;
        self.router.configure({
-         'home': {label: 'Home', isDefault: true},
-         'pastpurchases': {label: 'Past Purchases'},
-         'addpaymentdetails': {label: 'Add Payment Details'},
-         'profile': {label: 'Profile'},
-         'recentreceipts': {label: 'Recent Receipts'}
+         'Home': {label: 'Home', isDefault: true},
+         'PastPurchases': {label: 'Past Purchases'},
+         'AddPaymentDetails': {label: 'Add Payment Details'},
+         'Profile': {label: 'Profile'},
+         'RecentReceipts': {label: 'Recent Receipts'}
        });
       oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 
