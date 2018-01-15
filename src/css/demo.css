@@ -29,3 +29,24 @@
  background: #1C97C2; 
 }
 
+#name{
+  color: #00AFDC;
+  font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+}
+
+#name:after {
+  content: '\A';
+  white-space: pre;
+}
+
+#subheading{
+    font-size: 75%;
+}
+
+#likeheader{
+  color: #00AFDC;
+  font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+}
+

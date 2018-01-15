@@ -1,0 +1,122 @@
+<style>
+    
+    body {
+  width: 100%;
+  height: 100%;
+  background: #00AFDC;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo {
+  margin: 0 auto;
+  height: 20%;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url("PrimarkLogo.png");
+}
+#sign-in{
+  width: 75%;
+  position: relative;
+  margin: 30% auto;
+}
+.info {
+  top: 20%;
+  background: #CDEFF8;
+  height: 6%;
+  width: 100%;
+  display: block;
+  margin: 8% 0;
+  border: none;
+  text-align: left;
+  color: #7E878D;
+  font-size: 200%;
+}
+#login {
+  width: 100%;
+  height: 6%;
+  border: none;
+  background: #FFFFFF;
+  color: #00AFDC;
+  font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 250%;
+  margin-bottom: 10%;
+}
+
+.form-link {
+  text-decoration: none;
+  padding: 13px;
+  color: #A3E2EE;
+  font-size: 220%;
+  margin: auto 8.5%;
+}
+
+.form-link:hover {
+  color: #FFF;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Shared */
+
+#login-page #login-form .loginBtn:before {
+  content: "";  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;  
+}
+#login-page #login-form .loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+/* Facebook */
+#login-page #login-form .loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+  margin: auto;
+  position: absolute;
+  width: 75%;  
+  height: 6%;  
+  display: block;
+  line-height: 34px;  
+  cursor: pointer;
+  color: white;
+  font-size: 200%;
+  outline: none;
+  top: 50%; right: 0; left: 0; bottom: 0;  
+}
+#login-page #login-form .loginBtn--facebook:before {
+  border-right: #364e92 2px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 50% 50% no-repeat;
+}
+#login-page #login-form .loginBtn--facebook:hover,
+#login-page #login-form .loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+</style>
+
+
+  <div id="logo"></div>
+  <form id="sign-in">
+    <input class="info" id="username" type="text" name="username" placeholder="USERNAME">
+    <input class="info" id="password" type="password" name="password" placeholder="PASSWORD">
+    <button id="login" type="submit">LOGIN</button>
+    <a href="#" class="form-link">Register</a>
+    <a href="#" class="form-link">Forgot Password?</a>
+  </form>
+  <div id="login-page">
+  <div id="login-form">   
+    <button  class="loginBtn loginBtn--facebook">Login with Facebook</button>
+  </div>
+</div>
+  

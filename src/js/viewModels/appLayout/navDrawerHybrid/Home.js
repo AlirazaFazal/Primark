@@ -9,7 +9,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/appLayout/navDrawerHybri
       var self = this;
     
       self.handleAttached = function() {
-        app.generateContent()
+        app.generateContent();
       };
 
     }
