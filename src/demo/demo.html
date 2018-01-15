@@ -37,47 +37,57 @@
           <div id="navDrawer" role="navigation" class="oj-hybrid-applayout-offcanvas oj-offcanvas-start oj-contrast-marker">
             <!-- User Profile -->
             <div>
-              <img alt="profile image" src="css/samples/cookbook/images/appLayout/james_avatar.png" class="demo-james-icon">
-              <h2 class="demo-profile-name">James</h2>
+              <img alt="profile image" src="../css/samples/cookbook/images/appLayout/lucy_avatar.png" class="demo-lucy-icon">
+              <h2 class="demo-profile-name">Lucy</h2>
               <!-- Navigation -->
               <oj-navigation-list class="oj-navigationlist-stack-icon-label"
                                   on-click="[[toggleDrawer]]"
                                   selection="{{router.stateId}}">
                 <ul>
-                  <li id="home">
+                  <li id="Home">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
                       Home
                     </a>
                   </li>
-                  <li id="pastpurchases">
+                  <li id="PastPurchases">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24"></span>
                       Past Purchases
                     </a>
                   </li>
-                  <li id="addpaymentdetails">
+                  <li id="AddPaymentDetails">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24"></span>
                       Add Payment Details
                     </a>
                   </li>
-                  <li id="profile">
+                  <li id="Profile">
                     <a href="#">
+
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
                       Profile
                     </a>
                   </li>
-                  <li id="recentreceipts">
+                  <li id="RecentReceipts">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
                       Recent Receipts
                     </a>
                   </li>
+		 <li id="Logout">
+                    <a href="../js/views/appLayout/navDrawerHybrid/Login.html">
+                      <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
+                      Logout
+                    </a>
+                  </li>
                 </ul>
               </oj-navigation-list>
               <div class="oj-flex-bar oj-sm-justify-content-center">
-                <h2 class="demo-app-name">Oracle App Name</h2>
+
+<img style="width:95%; height:80" id="PrimarkLogo" src="../js/views/appLayout/navDrawerHybrid/images/PrimarkLogo.png" alt="Primark logo"></img>
+ 
+
               </div>
             </div>
           </div>
