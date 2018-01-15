@@ -4,7 +4,7 @@ require(['ojs/ojcore', 'knockout', 'jquery','viewModels/appLayout/navDrawerHybri
       
       // Change the default location for the viewModel and view files
       oj.ModuleBinding.defaults.modelPath = 'viewModels/appLayout/navDrawerHybrid/';
-      oj.ModuleBinding.defaults.viewPath = 'text!views/appLayout/navDrawerHybrid/';
+      oj.ModuleBinding.defaults.viewPath = 'views/appLayout/navDrawerHybrid/';
 
       // Method for adjusting the content area top/bottom paddings to avoid overlap with any fixed regions. 
       // This method should be called whenever your fixed region height may change.  The application
