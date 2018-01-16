@@ -7,12 +7,12 @@
   visibility: hidden;
 }
 
-.demo-james-icon {
-  width: 80px;
-  height: 80px;
+.demo-lucy-icon {
+  width: 125px;
+  height: 100px;
   display: block;
   padding-top: 24px;
-  padding-bottom: 16px;
+  padding-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -25,8 +25,21 @@
   margin: 0;
 }
 
+
+.oj-contrast-marker .oj-navigationlist-vertical .oj-navigationlist-item.oj-selected {
+  background-color: rgba(0,0,0,0.25);
+} 
+
 #navDrawer{
- background: #1C97C2; 
+ background: #00AFDC; 
+}
+
+.oj-contrast-marker a.oj-navigationlist-item-content .oj-navigationlist-item-label{
+ color: #ffffff;
+}
+
+.oj-navigationlist-item-label{
+ font-size: 150%;
 }
 
 #name{
