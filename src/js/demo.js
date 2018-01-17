@@ -37,7 +37,23 @@ require(['ojs/ojcore', 'knockout', 'jquery','viewModels/appLayout/navDrawerHybri
           }
         );
       });
-  });
 
+    function ViewModel()
+    {
+      this.moduleSettings = {
+        name: 'filmStrip/filmStripOverlaidNavDots'
+      }
+    }
+
+    $(function()
+    {    
+      ko.applyBindings(new ViewModel(), 
+        document.getElementById('filmstrip-overlaidpagingcontrol-example'));
+    });
+
+
+
+
+  });
 
 

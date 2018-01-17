@@ -22,6 +22,19 @@
   
 }
 
+
+input#username.info{
+  background-image: url("images/username.png");
+  background-repeat:no-repeat;
+  background-position:left 25px center;
+}
+
+input#password.info{
+  background-image: url("images/password.png");
+  background-repeat:no-repeat;
+  background-position:left 25px center;
+}
+
 #sign-in{
   width: 75%;
   position: relative;
@@ -29,6 +42,7 @@
   margin-top: 40%;
 }
 .info {
+  padding-left: 15%;
   top: 10%;
   background: #CDEFF8;
   height: 6%;
@@ -116,10 +130,10 @@
 
 
 <div id="logo"><img id="PrimarkLogo" src="images/PrimarkLogo.png" alt="Primark logo"></img></div>
-  <form id="sign-in">
-    <input class="info" id="username" type="text" name="username" placeholder="  USERNAME">
-    <input class="info" id="password" type="password" name="password" placeholder="  PASSWORD">
-    <button id="login" type="submit"><a href="../../../../demo/demo.html">LOGIN</a></button>
+  <form id="sign-in" action="../../../../demo/demo.html">
+    <input class="info" id="username" type="text" name="username" placeholder="USERNAME">
+    <input class="info" id="password" type="password" name="password" placeholder="PASSWORD">
+    <button id="login" type="submit">LOGIN</button>
     <a href="#" class="form-link">Register</a>
     <a href="#" class="form-link">Forgot Password?</a>
   </form>

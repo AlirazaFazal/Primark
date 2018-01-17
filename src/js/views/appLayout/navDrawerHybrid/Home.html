@@ -1,29 +1,301 @@
+<script>
+
+jQuery(document).ready(function() {
+   jQuery(".likeIt-table").clone(true).appendTo('#table-scroll').addClass('clone');   
+});
+
+ // Change the selector if needed
+var $table = $('table.basketTable'),
+    $bodyCells = $table.find('tbody tr:first').children(),
+    colWidth;
+
+// Adjust the width of thead cells when window resizes
+$(window).resize(function() {
+    // Get the tbody columns width array
+    colWidth = $bodyCells.map(function() {
+        return $(this).width();
+    }).get();
+    
+    // Set the width of thead columns
+    $table.find('thead tr').children().each(function(i, v) {
+        $(v).width(colWidth[i]);
+    });    
+}).resize(); // Trigger resize handler
+
+</script>
+
+
 <style>
-    #chatbotbutton {
+
+
+#chatbotbutton {
+  z-index: 2;
+  margin: 0 auto;
+  display:flex;
   position:relative;
-  margin-top:130%;
-  width: 100%;
+  width: 75%;
   height: 8%;
   background: #FFFFFF;
   color: #00AFDC;
   font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
   font-weight: bold;
   font-size: 125%;
-  border-top:1px solid lightskyblue;
+  border-top: white;
   border-bottom: white;
   border-left: white;
   border-right: white;
 }
-    
+ 
+
+.table-scroll {
+	position:relative;
+	max-width:100%;
+	height: 50%;
+	margin:auto;
+	overflow:hidden;
+	border:1px solid #00AFDC;
+	height:auto;
+}
+.table-wrap {
+	width:100%;
+	overflow:auto;
+}
+
+
+.table-scroll table {
+	width:100%;
+	margin:auto;
+	border-collapse:separate;
+	border-spacing:0;
+}
+.table-scroll th, .table-scroll td {
+	padding:5px 10px;
+	border: none;
+	background:#fff;
+	white-space:nowrap;
+	vertical-align:top;
+}
+.table-scroll thead, .table-scroll tfoot {
+	background:#f9f9f9;
+}
+.clone {
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+}
+.clone th, .clone td {
+	visibility:hidden
+}
+.clone td, .clone th {
+	border-color:transparent;
+}
+.clone tbody th {
+	visibility:visible;
+}
+.clone .fixed-side {
+	border:1px solid #000;
+	background:#eee;
+	visibility:visible;
+}
+.clone thead, .clone tfoot{background:transparent;}
+
+img#likeIcon, img#basketIcon{
+	top:0;
+	width:6%;
+	height:3%;
+}
+
+img#addfav{
+	height:40%;
+}
+
+img#product{
+	height: 40%;
+}
+
+
+
+
+table.basketTable {
+    text-align: center;
+    align: center;
+    width: 100%; /* Optional */
+    border-collapse: collapse; 
+    border-spacing: 0;
+    border:1px solid #00AFDC;
+}
+
+table.basketTable tbody,
+table.basketTable thead { display: block; }
+
+thead tr th { 
+    height: 30px;
+    line-height: 30px;
+    /*text-align: left;*/
+}
+
+table.basketTable tbody {
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+tbody td, thead th {
+    width: 20%; /* Optional */
+}
+
+tbody td:last-child, thead th:last-child {
+    border-right: none;
+}
+
+
+
+.scanButton {
+    background-color: #00AFDC;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 12px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 65%;
+    cursor: pointer;
+}
+
+.footer >div {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#chatbotIconImg {
+   z-index: 3;
+   margin-top: -10%;
+   display: flex;
+   width: 100%;
+   height: 8%;
+}
+
+
+
+
+
 </style>
 
 <div class="oj-hybrid-padding">
     <h2>Home</h2>
-    <h3 id="likeheader">LIKE IT?</h3>
-    <h3 id="basketheader">Basket</h3>
-    <div id="demoContent"></div>
+    <h3 id="likeheader"><img id="likeIcon" src="../js/views/appLayout/navDrawerHybrid/images/like_icon.png"/>  LIKE IT?</h3>
 
-    <footer>
-        <button id="chatbotbutton" type="submit">LOUISE YOUR RETAIL ASSISTANT</button>
-    </footer>
+	<div id="table-scroll" class="table-scroll">
+  	<div class="table-wrap">     
+	<table class="likeIt-table">
+
+      <tbody>
+        <tr>
+		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/like_img1.jpg"/></td>
+		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/like_img2.jpg"/></td>
+		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/like_img3.jpg"/></td>
+		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/tshirt_img1.png"/></td>
+  		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/tshirt_img2.png"/></td>
+  		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/tshirt_img3.png"/></td>
+  		<td style="vertical-align: middle;"><img id="product" src="../js/views/appLayout/navDrawerHybrid/images/tshirt_img4.png"/></td>
+   
+
+
+        </tr>
+        <tr>
+		<td id="price">£18.00  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+          <td id="price">£8.00  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+          <td id="price">£2.30  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+          <td id="price">£6.30  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+         <td id="price">£2.00  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+         <td id="price">£11.00  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+         <td id="price">£2.00  <img id="addfav" src="../js/views/appLayout/navDrawerHybrid/images/add_2_fav.png"/></td>
+        
+	
+	</tr>
+      </tbody> 
+    </table>
+    </div>
+    </div>
+
+    <h3 id="basketheader"><img id="basketIcon" src="../js/views/appLayout/navDrawerHybrid/images/basket_icon.png"/>  Basket</h3>
+
+
+
+<table class="basketTable">
+    <thead>
+        <tr>
+	    <th>Product</th>
+            <th></th>
+            <th>Price</th>
+            <th>Remove</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+	   <td><img id="basketProduct" src="../js/views/appLayout/navDrawerHybrid/images/tshirt_img1.png" /></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+	    <td><img id="binIcon" src="../js/views/appLayout/navDrawerHybrid/images/delete_icon.png" /></td>
+  
+        </tr>
+        <tr>
+		<td></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+
+        </tr>
+        <tr>
+		<td></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+  
+        </tr>
+        <tr>
+		<td></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+
+        </tr>
+        <tr>
+		<td></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+   
+        </tr>
+         <tr>
+		 <td></td>
+            <td>Content 1</td>
+            <td>Content 2</td>
+            <td>Content 3</td>
+   
+        </tr>
+   
+    </tbody>
+</table>
+
+
+
+	
+   
+
+
+<div><a href="#" class="scanButton">SCAN</a></div>
+
+
+    <div class="footer">
+	    <div id="chatbotIcon"><img id="chatbotIconImg" src="../js/views/appLayout/navDrawerHybrid/images/chatbot.png"/></div>
+	    <div><button id="chatbotbutton" type="submit">LOUISE YOUR RETAIL ASSISTANT</button></div>
+    </div>
 </div>

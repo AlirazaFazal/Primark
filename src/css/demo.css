@@ -9,7 +9,7 @@
 
 .demo-lucy-icon {
   width: 125px;
-  height: 100px;
+  height: 125px;
   display: block;
   padding-top: 24px;
   padding-bottom: 0px;
@@ -23,6 +23,12 @@
   color: #ffffff;
   padding-bottom: 42px;
   margin: 0;
+}
+
+
+#drawerToggleButton{
+    content: url(../js/views/appLayout/navDrawerHybrid/images/menu.png);
+    margin: 0 auto;
 }
 
 
@@ -46,6 +52,8 @@
   color: #00AFDC;
   font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
   font-weight: bold;
+  display: flex;
+  margin-left: 50px;
 }
 
 #name:after {
@@ -54,12 +62,38 @@
 }
 
 #subheading{
+    display: flex;
     font-size: 75%;
+    margin-left: 50px;
+    width: 100%;
 }
 
-#likeheader{
+#likeheader, #basketheader, #price{
   color: #00AFDC;
   font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
   font-weight: bold;
 }
 
+img#lucyIcon{
+  width:50%;
+  height:10%;
+}
+
+img#basketProduct{
+  width: 50%;
+  height: 20%;
+}
+
+img#binIcon{
+  width: 20%;
+  height: 40%;
+}
+
+img#menuIcons {
+  width: 8%;
+  height: 3%;
+}
+
+hr#rule {
+  border-color: rgba(255,255,255,0.6);
+}

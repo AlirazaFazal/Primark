@@ -17,3 +17,5 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/appLayout/navDrawerHybri
     return new HomeViewModel();
   }
 );
+
+

@@ -37,7 +37,7 @@
           <div id="navDrawer" role="navigation" class="oj-hybrid-applayout-offcanvas oj-offcanvas-start oj-contrast-marker">
             <!-- User Profile -->
             <div>
-              <img alt="profile image" src="../css/samples/cookbook/images/appLayout/lucy_avatar.png" class="demo-lucy-icon">
+              <img alt="profile image" src="../js/views/appLayout/navDrawerHybrid/images/lucy_profile_pic.png" class="demo-lucy-icon">
               <h2 class="demo-profile-name">Lucy</h2>
               <!-- Navigation -->
               <oj-navigation-list class="oj-navigationlist-stack-icon-label"
@@ -47,38 +47,54 @@
                   <li id="Home">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
-                      Home
-                    </a>
+		      <img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/home_icon.png"/>
+                      HOME
+		      <hr id="rule" width="100%"/>
+		    </a>
                   </li>
                   <li id="PastPurchases">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24"></span>
-                      Past Purchases
+		      <img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/past_purchases.png"/>
+                      PAST PURCHASES
+		 	<hr id="rule" width="100%"/>
                     </a>
                   </li>
                   <li id="AddPaymentDetails">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24"></span>
-                      Add Payment Details
+			<img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/add_payment_details.png"/>
+
+                      ADD PAYMENT DETAILS
+			<hr id="rule" width="100%"/>
                     </a>
                   </li>
                   <li id="Profile">
                     <a href="#">
-
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
-                      Profile
+
+			<img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/profile.png"/>
+
+                      PROFILE
+			<hr id="rule" width="100%"/>
                     </a>
                   </li>
                   <li id="RecentReceipts">
                     <a href="#">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
-                      Recent Receipts
+
+			<img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/recent_receipts.png"/>
+
+                      RECENT RECEIPTS
+			<hr id="rule" width="100%"/>
                     </a>
                   </li>
 		 <li id="Logout">
-                    <a href="#">
+                    <a href="../js/views/appLayout/navDrawerHybrid/Login.html">
                       <span class="oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24"></span>
-                      Logout
+			<img id="menuIcons" src="../js/views/appLayout/navDrawerHybrid/images/logout.png"/>
+
+                      LOGOUT
                     </a>
                   </li>
                 </ul>
@@ -102,6 +118,7 @@
                     <span>Navigation Drawer</span>
                   </oj-button>
                 </div>
+		<div id="userIcon"><img id="lucyIcon" src="../js/views/appLayout/navDrawerHybrid/images/lucy_profile_pic.png" /></div>
                 <div class="oj-hybrid-applayout-bar-title">
                     <h3>
                         <span id="name">LUCY</span>
